@@ -3,97 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dominic Zhao | ML Research Engineer</title>
-  <!-- Minimal, clean academic styling -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <title>Dominic Zhao</title>
   <style>
-    body { max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-    header { margin-bottom: 2rem; }
-    h1 { margin-bottom: 0.2rem; }
-    .subtitle { color: #555; font-size: 1.1rem; margin-top: 0; }
-    .links a { margin-right: 15px; font-weight: 500; text-decoration: underline; }
-    .pub-item { margin-bottom: 1rem; }
-    .pub-title { font-weight: bold; }
-    .pub-venue { font-style: italic; color: #444; }
-    .experience-role { display: flex; justify-content: space-between; font-weight: bold; }
-    .experience-sub { font-style: italic; color: #666; margin-bottom: 4px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "SF Pro Display", sans-serif;
+      background-color: #08090a;
+      color: #e6edf3;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Subtle background grid & glow */
+    .bg-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(56, 139, 253, 0.08) 0%, transparent 60%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 40px 40px, 40px 40px;
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 580px;
+      width: 100%;
+      background: rgba(18, 20, 24, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 16px;
+      padding: 42px 36px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.02);
+    }
+
+    .tag {
+      font-family: "SF Mono", Monaco, Menlo, Consolas, monospace;
+      font-size: 0.78rem;
+      color: #58a6ff;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 6px;
+      height: 12px;
+      background-color: #58a6ff;
+      animation: blink 1.2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #8b949e;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0%, transparent 100%);
+      margin-bottom: 24px;
+    }
+
+    .description {
+      font-size: 0.95rem;
+      color: #c9d1d9;
+      line-height: 1.7;
+    }
+
+    .description p {
+      margin-bottom: 14px;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .topic-pill {
+      font-family: "SF Mono", Monaco, Menlo, Consolas, monospace;
+      font-size: 0.75rem;
+      color: #a5d6ff;
+      background: rgba(56, 139, 253, 0.08);
+      border: 1px solid rgba(56, 139, 253, 0.2);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
 
-  <header>
+  <div class="bg-grid"></div>
+
+  <div class="container">
+    <div class="tag">
+      <span>// sys.status: synthesizing_workspace</span>
+      <span class="cursor"></span>
+    </div>
+
     <h1>Dominic Zhao</h1>
-    <p class="subtitle">ML Research Engineer &bull; Diffusion, 3D/World Models, RL & Technical AI Safety</p>
-    <div class="links">
-      <a href="mailto:your.email@domain.com">Email</a>
-      <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank">Google Scholar</a>
-      <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-    </div>
-  </header>
+    <p class="subtitle">Machine Learning Research &bull; Diffusion, 3D/World Models & Technical AI Safety</p>
 
-  <section>
-    <h2>About</h2>
-    <p>
-      I am a Machine Learning Research Engineer working at the intersection of generative modeling (diffusion, neural fields, world models) and reinforcement learning. My background spans mathematical foundations (EPFL Mathematics), foundational 3D/generative representations at Common Sense Machines (acquired by Google DeepMind), startup engineering leadership, and technical AI alignment research (SERI MATS under Victoria Krakovna).
-    </p>
-  </section>
+    <div class="divider"></div>
 
-  <section>
-    <h2>Publications</h2>
-    
-    <div class="pub-item">
-      <div class="pub-title">Learning where to learn: Gradient sparsity in meta and continual learning</div>
-      <div class="pub-venue">NeurIPS (Co-First Author)</div>
+    <div class="description">
+      <p>
+        Currently setting up an open laboratory to share empirical experiments, architectural deep dives, and research notes.
+      </p>
+      <p style="color: #8b949e; font-size: 0.9rem;">
+        Upcoming writeups will cover explorations in generative 3D representations, neural fields, agentic reasoning loops, and post-training alignment mechanics.
+      </p>
     </div>
 
-    <div class="pub-item">
-      <div class="pub-title">A contrastive rule for meta-learning</div>
-      <div class="pub-venue">NeurIPS (Co-Author)</div>
+    <div class="topics">
+      <span class="topic-pill">world-models</span>
+      <span class="topic-pill">diffusion</span>
+      <span class="topic-pill">neural-fields</span>
+      <span class="topic-pill">rl-reasoning</span>
+      <span class="topic-pill">alignment</span>
     </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Active Inference as a model of agency</div>
-      <div class="pub-venue">arXiv (Co-Author)</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Meta-learning via hypernetworks</div>
-      <div class="pub-venue">NeurIPS Workshop (First Author)</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-
-    <div class="experience-role">
-      <span>Independent Consultant</span>
-      <span>2025 – Present</span>
-    </div>
-    <div class="experience-sub">Self-Employed</div>
-    <p>Developing industry-first vision and agentic graph extraction systems, full-stack inference pipelines, and ML infrastructure.</p>
-
-    <div class="experience-role">
-      <span>Causal Security</span>
-      <span>2024 – 2025</span>
-    </div>
-    <div class="experience-sub">CTO & Founder</div>
-    <p>Co-developed cybersecurity AI agents, novel automated context management (&gt;90% reduction), and MCTS + GRPO post-training pipelines.</p>
-
-    <div class="experience-role">
-      <span>Common Sense Machines (Acquired by Google DeepMind)</span>
-      <span>2021 – 2024</span>
-    </div>
-    <div class="experience-sub">Staff ML Engineer — Generative 3D & World Models</div>
-    <p>Researched 3D/world generation architectures alongside foundational research leadership (now leading DeepMind Genie). Developed SDF topological defect mitigation, few-shot NeRFs, 6DoF detection, and large-scale model deployment.</p>
-
-    <div class="experience-role">
-      <span>SERI MATS</span>
-      <span>2023</span>
-    </div>
-    <div class="experience-sub">AI Safety Fellow</div>
-    <p>Technical AI alignment and agency research under the mentorship of Victoria Krakovna (Google DeepMind).</p>
-  </section>
+  </div>
 
 </body>
 </html>
